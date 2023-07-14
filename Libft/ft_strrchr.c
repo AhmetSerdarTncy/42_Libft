@@ -1,46 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 12:57:45 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/13 10:36:27 by ahtuncay         ###   ########.fr       */
+/*   Created: 2023/07/12 13:19:20 by ahtuncay          #+#    #+#             */
+/*   Updated: 2023/07/12 15:29:44 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char * ft_strrchr(const char *s, int c)
 {
-	size_t	index;
+	int i = ft_strlen(s);
 
-	index = 0;
-	if (size > 0)
+	while(i >= 0)
 	{
-		while (index < (size - 1) && src[index])
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
+		if((char)c == s[i])
+			return((char *)(s + i));
+		i--;
 	}
-	while (src[index])
-		index++;
-	return (index);
+	return(NULL);
 }
 
-/* 
-
-#include <stdio.h>
-
-int	main()
+int	main(void)
 {
 	char a[] = "Ahmet";
-	char b[] = "Serdar";
-
-	printf("%zu %s", ft_strlcpy(a, b, 4), a);
+	printf("%s", ft_strrchr(a, 'm'));
 }
-
-*/

@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 12:57:45 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/13 10:36:27 by ahtuncay         ###   ########.fr       */
+/*   Created: 2023/07/12 15:35:09 by ahtuncay          #+#    #+#             */
+/*   Updated: 2023/07/13 10:32:14 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	index;
+	int	i;
 
-	index = 0;
-	if (size > 0)
+	i = 0;
+	while (i < n && (s1[i] || s2[i]))
 	{
-		while (index < (size - 1) && src[index])
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	while (src[index])
-		index++;
-	return (index);
+	return (0);
 }
 
-/* 
-
-#include <stdio.h>
-
-int	main()
+int	main(void)
 {
-	char a[] = "Ahmet";
-	char b[] = "Serdar";
-
-	printf("%zu %s", ft_strlcpy(a, b, 4), a);
+	char a[] = "Bhmet";
+	char b[] = "Ahmet";
+	printf("%d", ft_strncmp(a, b, 4));
 }
-
-*/

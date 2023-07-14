@@ -6,7 +6,7 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:53:38 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/10 23:52:31 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/14 10:44:06 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n);
-void	bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *s);
 
 #endif

@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 12:57:45 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/13 10:36:27 by ahtuncay         ###   ########.fr       */
+/*   Created: 2023/07/13 14:31:24 by ahtuncay          #+#    #+#             */
+/*   Updated: 2023/07/13 14:41:03 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	index;
+	size_t	i;
+	char	*str;
 
-	index = 0;
-	if (size > 0)
+	i = 0;
+	str = (char *)s;
+
+	while (i < n)
 	{
-		while (index < (size - 1) && src[index])
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
+		if (*str == (char)c)
+			return (str);
+		str++;
+		i++;
 	}
-	while (src[index])
-		index++;
-	return (index);
+	return (NULL);
 }
 
-/* 
-
-#include <stdio.h>
-
-int	main()
+int	main(void)
 {
-	char a[] = "Ahmet";
-	char b[] = "Serdar";
-
-	printf("%zu %s", ft_strlcpy(a, b, 4), a);
+	char s[] = "Ahmet Serdar TUNÇAY";
+	int c = 65;
+	printf("%s", ft_memchr(s, c, 4));
 }
 
-*/

@@ -1,46 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 12:57:45 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/13 10:36:27 by ahtuncay         ###   ########.fr       */
+/*   Created: 2023/07/13 14:42:57 by ahtuncay          #+#    #+#             */
+/*   Updated: 2023/07/13 15:07:27 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	index;
+	unsigned char * a1;
+	unsigned char * a2;
+	size_t i;
 
-	index = 0;
-	if (size > 0)
+	a1 = (unsigned char *)s1;
+	a2 = (unsigned char *)s2;
+	i = 0;
+	
+	while(i < n)
 	{
-		while (index < (size - 1) && src[index])
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
+		if(a2[i] != a1[i])
+			return(a2[i] - a1[i]);
+		i++;
 	}
-	while (src[index])
-		index++;
-	return (index);
+	return(0);
 }
 
-/* 
-
-#include <stdio.h>
-
-int	main()
+int	main(void)
 {
-	char a[] = "Ahmet";
-	char b[] = "Serdar";
-
-	printf("%zu %s", ft_strlcpy(a, b, 4), a);
+	char a[] = "Bhmet";
+	char b[] = "Ahmet";
+	
+	printf("%d", ft_memcmp(a, b, 3));
 }
-
-*/
