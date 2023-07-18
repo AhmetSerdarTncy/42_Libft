@@ -6,13 +6,13 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 12:56:34 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/10 23:27:12 by ahtuncay         ###   ########.tr       */
+/*   Updated: 2023/07/17 15:54:45 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (c >= 27 && c < 127);
+	return (c >= 32 && c < 127);
 }
 
 /*

@@ -6,14 +6,14 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 23:44:55 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/11 01:46:04 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/17 10:38:11 by ahtuncay         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-size_t ft_strlcat(char *dst, const char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	a;
@@ -35,9 +35,14 @@ size_t ft_strlcat(char *dst, const char *src, size_t n)
 	dst[a] = '\0';
 	return (d + s);
 }
+
+/*
+
 int	main(void)
 {
 	char a[] = "Ahmet";
 	char b[] = "Serdar";
 	printf("%zu - %s",ft_strlcat(a, b, 10), a);
 }
+
+*/

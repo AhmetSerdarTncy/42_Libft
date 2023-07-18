@@ -6,7 +6,7 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 23:53:28 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/06 11:54:21 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/17 11:58:58 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
+/*
+
 int	main(void)
 {
 	printf("%d", ft_isalpha('4'));
 }
+
+*/

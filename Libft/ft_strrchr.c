@@ -6,27 +6,32 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 13:19:20 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/12 15:29:44 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/17 10:44:30 by ahtuncay         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i = ft_strlen(s);
+	int	i; 
 
-	while(i >= 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if((char)c == s[i])
-			return((char *)(s + i));
+		if ((char)c == s[i])
+			return ((char *)(s + i));
 		i--;
 	}
-	return(NULL);
+	return (NULL);
 }
+
+/*
 
 int	main(void)
 {
 	char a[] = "Ahmet";
 	printf("%s", ft_strrchr(a, 'm'));
 }
+
+*/

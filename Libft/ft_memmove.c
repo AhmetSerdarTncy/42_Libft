@@ -6,7 +6,7 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 11:32:38 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/10 23:31:47 by ahtuncay         ###   ########.tr       */
+/*   Updated: 2023/07/17 10:35:55 by ahtuncay         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		while (i < n)
 		{
 			*(char *)(dst + i) = *(char *)(src + i);
-				i--;
+			i--;
 		}
 	}
 	else

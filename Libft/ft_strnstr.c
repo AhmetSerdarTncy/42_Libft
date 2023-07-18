@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fT_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 23:28:14 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/13 23:55:44 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/18 15:24:13 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return ((char *)haystack + i);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
+
+/*
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char a[] = "Ahmet Serdar";
+	char a = '\0';
 	char b[] = "Ser";
- 	printf("%s", ft_strnstr(a, b, 15));
+ 	printf("%s", ft_strnstr(&a, b, 15));
 }
+
+*/

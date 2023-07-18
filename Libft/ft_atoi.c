@@ -6,7 +6,7 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:47:35 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/14 02:05:21 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/17 10:27:31 by ahtuncay         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	ft_atoi(const char *str)
 	return (result * d);
 }
 
+/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -52,3 +54,4 @@ result = ft_atoi(str);
 printf("%d", result);
 return (0);
 }
+*/

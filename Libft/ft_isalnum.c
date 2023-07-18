@@ -6,11 +6,11 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 10:40:38 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/10 23:28:07 by ahtuncay         ###   ########.tr       */
+/*   Updated: 2023/07/17 11:58:43 by ahtuncay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

@@ -6,15 +6,15 @@
 /*   By: ahtuncay <ahtuncay@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 09:50:58 by ahtuncay          #+#    #+#             */
-/*   Updated: 2023/07/14 10:47:22 by ahtuncay         ###   ########.fr       */
+/*   Updated: 2023/07/17 10:28:11 by ahtuncay         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
 	ptr = malloc(count * size);
 	if (!ptr)
@@ -22,6 +22,8 @@ void *ft_calloc(size_t count, size_t size)
 	ft_bzero (ptr, count * size);
 	return (ptr);
 }
+
+/*
 
 int main()
 {
@@ -37,3 +39,4 @@ int main()
     }
     return 0;
 }
+*/
